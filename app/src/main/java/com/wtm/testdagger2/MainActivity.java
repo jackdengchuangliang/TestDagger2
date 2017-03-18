@@ -1,6 +1,7 @@
 package com.wtm.testdagger2;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -53,14 +54,13 @@ public class MainActivity extends AppCompatActivity implements ILoginView {
 
     @Override
     public void onLoginend() {
-        showMsg("请求完成");
         mProgressBar.setVisibility(View.GONE);
         Log.i(TAG, "onLoginend:");
     }
 
     @Override
     public void onLoginSuccess(String result) {
-        showMsg(mLoginPresenterCompl.mPerson.name+result);
+        startActivity(new Intent(this,DataActivity.class));
         Log.i(TAG, mLoginPresenterCompl.mPerson.name+"onLoginSuccess:");
     }
 

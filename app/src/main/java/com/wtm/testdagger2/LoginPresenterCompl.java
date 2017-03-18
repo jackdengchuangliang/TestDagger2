@@ -25,7 +25,7 @@ public class LoginPresenterCompl implements ILoginPresenter {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                SystemClock.sleep(2000);
+                SystemClock.sleep(500);
                 mLoginView.getContext().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
