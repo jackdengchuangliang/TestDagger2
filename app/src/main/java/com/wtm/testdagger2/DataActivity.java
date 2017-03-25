@@ -35,6 +35,7 @@ public class DataActivity extends AppCompatActivity implements HTLoadMoreListene
         setContentView(R.layout.activity_data);
         initData();
         initView();
+        //test
 
     }
 
